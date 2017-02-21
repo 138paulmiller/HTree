@@ -7,8 +7,8 @@
 	internal pair whose freq = the sum of each pairs frequency.<br> 
 	-The merged pair is then added to the set.
 
-##Encoding/Decoding with Code Table
-###Demonstration for an example data string
+##Encoding/Decoding
+###Demonstration with an example data string
 Data:
 Hello! I am a Huffman tree
 
@@ -18,9 +18,9 @@ Encoded Data:
 Decoded Data:
 Hello! I am a Huffman tree
 
-Code Table:
+#Code Table
 | Sym | Code |
-| :-- | :-----: |
+| :-- | ------: |
 |   |     11 |
 | ! |  00100 |
 | H |   0110 |
