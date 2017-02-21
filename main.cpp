@@ -9,7 +9,7 @@ int main(int argc, char**argv)
 	if(argc == 2)
 		data = argv[1];
 	else
-		data  = "Hello World! I am a Huffman Tree!";
+		data  = "Hello! I am a Huffman tree";
 	std::cout <<"\nData:\n" << data << "\n"; 
 	data= h.encodeData(data);
 

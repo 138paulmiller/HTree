@@ -161,10 +161,10 @@ void HTree::encode(HNode * root,  std::string code)
 void HTree::print()
 {
 	std::cout << "Code Table:\n";
-	std::cout << std::setw(6) << std::left <<"Sym"  << "Code\n" << std::right 
-		      << std::setfill('-') << std::setw(12) << ":" << std::setfill(' ')<<"\n";
+	std::cout  << std::left <<"Sym"  << "| Code\n" << std::right 
+		      << std::setfill('-') << std::setw(5) << " | " << std::setfill('-') << std::setw(6)<< "-"<< std::setfill(' ')<<"\n";
 	for(std::map<char, std::string>::iterator it = codeMap.begin(); it != codeMap.end(); it++)
-		std::cout << std::setw(2) << it->first << " | " << std::setw(6) << (it->second) << "|\n";
+		std::cout << std::setw(2) << it->first << " | " << std::setw(6) << (it->second) << "\n";
 }
 void HTree::printForest()
 {

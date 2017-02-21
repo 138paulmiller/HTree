@@ -7,37 +7,31 @@
 	internal pair whose freq = the sum of each pairs frequency.<br> 
 	-The merged pair is then added to the set.
 
-![alt text](Huffman_Tree.png)<br>
-
-##Example Encoding/Decoding with Code Table
+##Encoding/Decoding with Code Table
+###Demonstration for an example data string
 Data:
-Hello World! I am a Huffman Tree!
+Hello! I am a Huffman tree
 
 Encoded Data:
-1011 0010 111 111 1010 000 01011 1010 1001 111 01010 1000 000 01001 000 110 0111 000 110 000 1011 01000 0110 0110 0111 110 00111 000 00110 1001 0010 0010 1000 
+0110 101 0101 0101 00101 00100 11 00011 11 100 0100 11 100 11 0110 00010 0011 0011 0100 100 00001 11 00000 0111 101 101 
 
 Decoded Data:
-Hello World! I am a Huffman Tree!
+Hello! I am a Huffman tree
 
 Code Table:
-Sym   Code
------------:
-   |    000|
- ! |   1000|
- H |   1011|
- I |  01001|
- T |  00110|
- W |  01011|
- a |    110|
- d |  01010|
- e |   0010|
- f |   0110|
- l |    111|
- m |   0111|
- n |  00111|
- o |   1010|
- r |   1001|
- u |  01000|
-
-
-
+Sym| Code
+-- | ------
+   |     11
+ ! |  00100
+ H |   0110
+ I |  00011
+ a |    100
+ e |    101
+ f |   0011
+ l |   0101
+ m |   0100
+ n |  00001
+ o |  00101
+ r |   0111
+ t |  00000
+ u |  00010
