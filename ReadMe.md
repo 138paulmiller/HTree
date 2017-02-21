@@ -7,29 +7,32 @@
 	internal pair whose freq = the sum of each pairs frequency. 
 	This merged pair is then added to the set.
 
-##Example Encoding/Decoding and Code Table
+##Example Encoding/Decoding with Code Table
 Data:
-Mary had a little lamb
+Hello World! I am a Huffman Tree!
 
 Encoded Data:
-1111 001 1110 1101 000 1100 001 1011 000 001 000 011 1010 0100 0100 011 1001 000 011 001 1000 0101 
+1011 0010 111 111 1010 000 01011 1010 1001 111 01010 1000 000 01001 000 110 0111 000 110 000 1011 01000 0110 0110 0111 110 00111 000 00110 1001 0010 0010 1000 
 
 Decoded Data:
-Mary had a little lamb
+Hello World! I am a Huffman Tree!
 
 Code Table:
  :000
-M:1111
-a:001
-b:0101
-d:1011
-e:1001
-h:1100
-i:1010
-l:011
-m:1000
-r:1110
-t:0100
-y:1101
+!:1000
+H:1011
+I:01001
+T:00110
+W:01011
+a:110
+d:01010
+e:0010
+f:0110
+l:111
+m:0111
+n:00111
+o:1010
+r:1001
+u:01000
 
 

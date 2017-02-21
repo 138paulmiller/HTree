@@ -1,11 +1,15 @@
 #include "htree.h"
 
 
-int main()
+int main(int argc, char**argv)
 {
 	std::cout << "\nHTree\n"; 
 	HTree h;
-	std::string data = "Mary had a little lamb";
+	std::string data;
+	if(argc == 2)
+		data = argv[1];
+	else
+		data  = "Hello World! I am a Huffman Tree!";
 	std::cout <<"\nData:\n" << data << "\n"; 
 	data= h.encodeData(data);
 
