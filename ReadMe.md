@@ -10,31 +10,34 @@
 ![alt text](Huffman_Tree.png)<br>
 
 ##Example Encoding/Decoding with Code Table
-Data:<br>
+Data:
 Hello World! I am a Huffman Tree!
 
-Encoded Data:<br>
+Encoded Data:
 1011 0010 111 111 1010 000 01011 1010 1001 111 01010 1000 000 01001 000 110 0111 000 110 000 1011 01000 0110 0110 0111 110 00111 000 00110 1001 0010 0010 1000 
 
-Decoded Data:<br>
+Decoded Data:
 Hello World! I am a Huffman Tree!
 
-Code Table:<br>
- :000<br>
-!:1000<br>
-H:1011<br>
-I:01001<br>
-T:00110<br>
-W:01011<br>
-a:110<br>
-d:01010<br>
-e:0010<br>
-f:0110<br>
-l:111<br>
-m:0111<br>
-n:00111<br>
-o:1010<br>
-r:1001<br>
-u:01000<br>
+Code Table:
+Sym   Code
+-----------:
+   |    000|
+ ! |   1000|
+ H |   1011|
+ I |  01001|
+ T |  00110|
+ W |  01011|
+ a |    110|
+ d |  01010|
+ e |   0010|
+ f |   0110|
+ l |    111|
+ m |   0111|
+ n |  00111|
+ o |   1010|
+ r |   1001|
+ u |  01000|
+
 
 
