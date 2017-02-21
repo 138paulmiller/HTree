@@ -56,7 +56,7 @@ void HTree::HNode::print(int i)
 {
 	std::cout <<std::setfill('\t')<<std::setw(i) << " ";
  	isLeaf() ? std::cout << c : std::cout<<"IN"; 
-	std::cout<<":" <<freq<< "\n";
+	std::cout<<"|" <<freq<< "\n";
 	std::cout << std::setfill(' ');
 	if(l)l->print(i+1);
 	if(r)r->print(i+1);
@@ -161,8 +161,10 @@ void HTree::encode(HNode * root,  std::string code)
 void HTree::print()
 {
 	std::cout << "Code Table:\n";
+	std::cout << std::setw(6) << std::left <<"Sym"  << "Code\n" << std::right 
+		      << std::setfill('-') << std::setw(12) << ":" << std::setfill(' ')<<"\n";
 	for(std::map<char, std::string>::iterator it = codeMap.begin(); it != codeMap.end(); it++)
-		std::cout << it->first << ":" << (it->second) << "\n";
+		std::cout << std::setw(2) << it->first << " | " << std::setw(6) << (it->second) << "|\n";
 }
 void HTree::printForest()
 {
