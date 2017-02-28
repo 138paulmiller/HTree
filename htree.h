@@ -32,6 +32,7 @@ public:
 	std::string encodeData(std::string data);
 	void print();
 	void printForest();
+	void clear();
 protected:
 	class HNode{
 	public:

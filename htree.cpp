@@ -68,12 +68,24 @@ HTree::HTree()
 }
 HTree::~HTree()
 {
+	clear();
+}
+void HTree::clear()
+{
+	codeMap.clear();
+	//manually delete entries allocated
 	for(int i =0; i < forest.size();i++)
-		if(forest[i]) delete forest[i];
+		if(forest[i]) 
+		{
+			delete forest[i];
+			forest[i] = 0;
+		}
+	forest.clear(); //clear vector
+	isHeap = false;
 }
 std::string HTree::encodeData(std::string data)
 {
-
+	clear(); //lear forest for new data string
 	std::ostringstream oss;
 	for(int i=0; i < data.size(); i++)
 		add(data[i]);
@@ -161,10 +173,10 @@ void HTree::encode(HNode * root,  std::string code)
 void HTree::print()
 {
 	std::cout << "#Code Table" << std::endl
-			  << "| Sym | Code |" << std::endl 
+			  << "| Sym | Code    |" << std::endl 
 			  << "| :-- | ------: |"<< std::endl;
 	for(std::map<char, std::string>::iterator it = codeMap.begin(); it != codeMap.end(); it++)
-		std::cout << "| " << it->first << " | " << std::setw(6) << (it->second) << " |" <<std::endl;
+		std::cout << "| " << std::setw(3) << it->first << " | " << std::setw(7) << (it->second) << " |" <<std::endl;
 }
 void HTree::printForest()
 {

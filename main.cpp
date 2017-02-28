@@ -3,22 +3,39 @@
 
 int main(int argc, char**argv)
 {
-	std::cout << "\nHTree\n"; 
+	std::cout << "\nHTree"
+				<< "\nencode - Prompts to encode new data string"
+				<< "\ndecode - Decodes encoded string"
+				<< "\nprint  - Prints code table\n" 
+				<< "\nexit  - Exits program\n"; 
 	HTree h;
-	std::string data;
+	std::string encodedData,decodedData, input;
 	if(argc == 2)
-		data = argv[1];
-	else
-		data  = "Hello! I am a Huffman tree";
-	std::cout <<"\nData:\n" << data << "\n"; 
-	data= h.encodeData(data);
+		input = argv[1];
 
-	std::cout <<"\nEncoded Data:\n" << data << "\n"; 
 
-	data = h.decodeData(data);
-	std::cout << "\nDecoded Data:\n" << data << "\n\n"; 
-	h.print();
-	std::cout << "\n";
+	do
+	{
+		std::cout << ">";
+		std::getline(std::cin,input);
+		if(input == "encode")
+		{
+			std::cout << "Data:";
+			std::getline(std::cin,input);
+			encodedData= h.encodeData(input);
+			std::cout <<"\nEncoded:\n" << encodedData << "\n"; 
+		}
+		else if(input == "decode")
+		{
+			decodedData= h.decodeData(encodedData);
+			std::cout <<"\nDecoded:\n" << decodedData << "\n"; 
+		}
+		else if(input == "print") 
+		{
+			h.print();
+			std::cout << "\n";
+		}
+	}while(input != "exit");
 	return 0;
 }
 
